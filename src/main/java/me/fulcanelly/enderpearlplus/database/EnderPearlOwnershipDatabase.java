@@ -22,7 +22,7 @@ public class EnderPearlOwnershipDatabase {
 
     @SneakyThrows
     private static Connection connect() {
-        // TODO
+        // TODO adjust location
         String url = "jdbc:sqlite:pearl_database.db";
         return DriverManager.getConnection(url);
     }
