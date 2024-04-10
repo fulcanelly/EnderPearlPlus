@@ -42,7 +42,7 @@ jobs:
           name: EnderPearlPlus-Standalone.jar
           path: target/EnderPearlPlus-*.jar
 
-      - name: Upload Standalone jar
+      - name: Upload Light jar
         uses: actions/upload-artifact@v2
         with:
             name: EnderPearlPlus-Light.jar
