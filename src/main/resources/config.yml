@@ -1,0 +1,6 @@
+# check-world - Verifies if the ender pearl and its owner are in the same world.
+# When disabled, it tries teleporting the player across worlds,
+#which typically fails, causing continuous pearl regeneration
+# until the player enters the pearl's world, triggering teleportation.
+
+check-world: true

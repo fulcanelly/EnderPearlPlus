@@ -12,11 +12,13 @@ import org.bukkit.event.entity.ProjectileLaunchEvent;
 import com.saicone.rtag.RtagEntity;
 
 import lombok.AllArgsConstructor;
+import me.fulcanelly.enderpearlplus.config.Config;
 import me.fulcanelly.enderpearlplus.database.EnderPearlOwnershipDatabase;
 
 @AllArgsConstructor
 public class PearlHitNThrowListener implements Listener {
     final EnderPearlOwnershipDatabase db;
+    final Config config;
 
     @EventHandler
     public void onPearlLanding(ProjectileHitEvent event) {
@@ -46,12 +48,10 @@ public class PearlHitNThrowListener implements Listener {
             return;
         }
 
-        // // if config enabled
-        // if
-        // (!player.getLocation().getWorld().equals(oldPearl.getLocation().getWorld()))
-        // {
-        // return;
-        // }
+        var inSameWorld = player.getLocation().getWorld().equals(oldPearl.getLocation().getWorld());
+        if (config.checkWorld && !inSameWorld) {
+            return;
+        }
 
         var newPearl = player.launchProjectile(EnderPearl.class);
 
