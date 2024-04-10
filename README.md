@@ -1,9 +1,15 @@
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/fulcanelly/EnderPearlPlus/total)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/fulcanelly/EnderPearlPlus/main.yml)
+
 ## EnderPearlPlus
 
 EnderPearlPlus is the Spigot plugin that aims to fix problem - [ender pearl bug](https://bugs.mojang.com/browse/MCPE-55823).
 That bug causes ender pearls to "forget" their owner if the player exits and re-enters the game while the pearl is in mid-air. As a result, when the ender pearl eventually lands, it fails to teleport the player, breaking the expected gameplay mechanic.
 
-I.e. this plugin helps ender pearls remember it's owner.
+### Motivation 
+Since this plugin helps ender pearls remember it's owner
+
+This could be valuable for SMP servers aiming to maintain a vanilla experience while providing players advanced travel options.
 
 As a bonus it's adds ability to customize ender pearl behaviour such as allowing teleporting from other worlds
 
