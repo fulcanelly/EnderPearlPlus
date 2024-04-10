@@ -4,12 +4,14 @@ import lombok.SneakyThrows;
 import java.sql.*;
 
 public class EnderPearlOwnershipDatabase {
-    static {
-        initializeTable();
+    String url;
+
+    public EnderPearlOwnershipDatabase(String path) {
+        url = "jdbc:sqlite:" + path + "/pearl_database.db";
     }
 
     @SneakyThrows
-    private static void initializeTable() {
+    public void initializeTable() {
         try (Connection conn = connect();
                 Statement stmt = conn.createStatement()) {
             String sql = "CREATE TABLE IF NOT EXISTS ender_pearl_records (" +
@@ -21,9 +23,7 @@ public class EnderPearlOwnershipDatabase {
     }
 
     @SneakyThrows
-    private static Connection connect() {
-        // TODO adjust location
-        String url = "jdbc:sqlite:pearl_database.db";
+    private Connection connect() {
         return DriverManager.getConnection(url);
     }
 
