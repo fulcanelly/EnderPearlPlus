@@ -52,14 +52,6 @@
             <scope>compile</scope>
         </dependency>
 
-
-        <dependency>
-            <groupId>io.papermc.paper</groupId>
-            <artifactId>paper-api</artifactId>
-            <version>1.20.4-R0.1-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-
         <dependency>
             <groupId>com.saicone.rtag</groupId>
             <artifactId>rtag</artifactId>
@@ -69,19 +61,7 @@
         <!-- Other modules -->
         <dependency>
             <groupId>com.saicone.rtag</groupId>
-            <artifactId>rtag-block</artifactId>
-            <version>LATEST</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.saicone.rtag</groupId>
             <artifactId>rtag-entity</artifactId>
-            <version>LATEST</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.saicone.rtag</groupId>
-            <artifactId>rtag-item</artifactId>
             <version>LATEST</version>
             <scope>compile</scope>
         </dependency>
@@ -109,7 +89,7 @@
             <url>https://jitpack.io</url>
         </repository>
     </repositories>
-    
+
     <build>
         <pluginManagement>
             <plugins>
